@@ -7,6 +7,7 @@
     <title>HandiAssis't</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/energy.css">
     <script src="js/main.js"></script>
 </head>
 
@@ -21,6 +22,39 @@
     <div class="menu_content hide">
         <div onclick="hide_menu()" class="btn menu_quit">Quitter</div>
         Menu
+    </div>
+    <div class="health">
+        <h1>Santé</h1>
+        <div class="heartbeatloader">
+            <svg class="svgdraw" width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg">
+                <path class="path" d="M 0 200 l 100 0 l 5 -40 l 5 40 l 10 0 l 5 15 l 10 -140 l 10 220 l 5 -95 l 10 0 l 5 20 l 5 -20 l 100 0 l 100 0 l 100 0 "
+                    fill="transparent" stroke-width="10" stroke="black" />
+            </svg>
+
+        </div>
+        <div class="tension">Tension : <span>10</span></div>
+    </div>
+    <div class="energy hide">
+        <h1>Energie</h1>
+
+        <div class="container-battery">
+            <div class="container-battery-top"></div>
+            <div class="container-battery-body">
+                <div class="gauge-battery" id="gauge-house"></div>
+            </div>
+
+        </div>
+        <div class="battery-time">Temps restant : <span id="span-time-house">4</span> heures</div>
+
+        <div class="container-battery">
+            <div class="container-battery-top"></div>
+            <div class="container-battery-body">
+                <div class="gauge-battery" id="gauge-car"></div>
+            </div>
+
+        </div>
+        <div class="battery-time">Temps restant : <span id="span-time-car">4</span> heures</div>
+        <script src="js/energy.js"></script>
     </div>
     <img src="images/chat.svg" class="chat_icon" onclick="chat()"></div>
     <div class="chat hide">

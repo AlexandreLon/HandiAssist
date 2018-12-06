@@ -83,9 +83,26 @@ main
 .chat
 {
     height: 50%; 
-    width: 20%;
     position: absolute;
     bottom: 60px;
     right: 10px;
     background: white;
+}
+
+@media screen and (max-width: 640px) {
+  .chat {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .chat {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .chat {
+    width: 30%;
+  }
 }
