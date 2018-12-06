@@ -1,0 +1,121 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.band{
+    height: 2em;
+    background-color: red;
+}
+
+h1{
+    text-align: center;
+
+}
+
+
+ /*BATTERY*/
+.container-battery{
+    position: relative;
+    margin: auto;
+
+    height: 100px;
+    width: 250px;
+}
+
+.container-battery-top{
+    position: relative;
+    margin: auto;
+    top: calc((70px / 2) + 3px);
+    left: 45%;
+    background-color: black;
+    height: 20px;
+    width: 10px;
+}
+
+.container-battery-body{
+    position: relative;
+    margin: auto;
+    border: 5px solid black;
+    height: 50px;
+    width: 208px;
+}
+
+
+.gauge-battery{
+    position: relative;
+    background-color: green;
+    height: 50px;
+    width: 208px;
+}
+
+/*Battery timex*/
+.battery-time{
+    position: relative;
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+/*Energy*/
+#heart-rate{
+    width: 100%;
+}
+
+.heartbeatloader {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    z-index: -2;
+    top: 40px;
+}
+.svgdraw {
+    top:0px;
+    left:0px;
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    transform: scale(1.4);
+    z-index: 3;
+}
+.path {
+    stroke: rgba(3, 3, 3, 0.95);
+    stroke-width: 5px;
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: draw 1.5s infinite forwards normal linear;
+    animation-delay: 0.1s;
+    position: relative;
+}
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes innerbeat {
+    0% {transform: scale(1);}
+    10% {transform: scale(1);}
+    50% {transform: scale(1.15);}
+    60% {transform: scale(1.05);}
+    75% {transform: scale(1.2);}
+}
+
+@keyframes outerbeat {
+    0% {transform: scale(1.2);}
+    10% {transform: scale(1.2);}
+    50% {transform: scale(1.3);}
+    60% {transform: scale(1.25);}
+    75% {transform: scale(1.3);}
+}
+
+.tension{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    top: 80px;
+}
