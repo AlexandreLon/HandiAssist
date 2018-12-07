@@ -7,8 +7,12 @@ window.onload = function () {
         let strHour = h + ":" + m + ":" + s;
         document.querySelector('.hour').innerHTML = strHour;
         setTimeout(hour, 500);
+
     }
     hour();
+    var lama = document.getElementById("Lama");
+    lama.addEventListener("dblclick", quitter);
+
 
     function changeBatteryHouse(percent) {
         var percentWidth = (percent * 208) / 100;
@@ -53,6 +57,7 @@ function hide_all() {
     hide_menu();
     document.querySelector(".health").classList.add("hide");
     document.querySelector(".energy").classList.add("hide");
+    document.querySelector(".memes").classList.add("hide");
 }
 
 function display_energy() {
@@ -63,6 +68,26 @@ function display_energy() {
 function display_health() {
     hide_all();
     document.querySelector(".health").classList.remove("hide");
+}
+
+function display_meme(n) {
+    hide_all();
+    document.querySelector(".memes").classList.remove("hide");
+    let imgs = document.querySelector(".img_meme");
+    switch (n) {
+        case 1:
+            imgs.src = "/images/meme1.png"
+            break;
+        case 2:
+            imgs.src = "/images/meme2.jpg"
+            break;
+        case 3:
+            imgs.src = "/images/meme3.jpg"
+            break;
+        case 4:
+            imgs.src = "/images/meme4.png"
+            break;
+    }
 }
 
 function display_menu() {
@@ -81,24 +106,24 @@ function hide_menu() {
     document.querySelector('main').classList.remove('hide');
 };
 
-var boto = setTimeout(function(){});
+var boto = setTimeout(function () { });
 
 function chat(hop = false) {
     clearTimeout(boto);
     let content_chat = document.querySelector('.chat');
     if (content_chat.classList.contains('hide') && document.querySelector('.menu_content').classList.contains("hide")) {
         content_chat.classList.remove("hide");
-        if(hop){
+        if (hop) {
             hophophop();
         }
-        if(questionNum==0){
+        if (questionNum == 0) {
             questionNum++;
             chatInit();
         }
     }
     else {
         content_chat.classList.add("hide");
-        boto = setTimeout(chat,10000,true);
+        boto = setTimeout(chat, 10000, true);
     }
 }
 
@@ -141,3 +166,4 @@ function fsvg(e, load) {
     }
 
 }
+

@@ -34,22 +34,22 @@
             </div>
             <div class="container_icon">
                 <object data="/images/Icons/eau.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
-                <div class="onclick-div onclick-health" onclick="display_energy()"></div>
+                <div class="onclick-div onclick-health" onclick="display_meme(1)"></div>
             </div>
 
             <div class="container_icon">
                 <object data="/images/Icons/security.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
-                <div class="onclick-div onclick-health" onclick="display_energy()"></div>
+                <div class="onclick-div onclick-health" onclick="display_meme(2)"></div>
             </div>
 
             <div class="container_icon">
                 <object data="/images/Icons/robot.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
-                <div class="onclick-div onclick-health" onclick="display_energy()"></div>
+                <div class="onclick-div onclick-health" onclick="display_meme(3)"></div>
             </div>
 
             <div class="container_icon">
                 <object data="/images/Icons/home.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
-                <div class="onclick-div onclick-health" onclick="display_energy()"></div>
+                <div class="onclick-div onclick-health" onclick="display_meme(4)"></div>
             </div>
 
             <div class="container_icon">
@@ -92,13 +92,18 @@
         <div class="battery-time">Temps restant : <span id="span-time-car">4</span> heures</div>
         <!-- <script src="js/energy.js"></script> -->
     </div>
-    <img src="images/chat.svg" class="chat_icon" onclick="chat()"></div>
+    <div class="memes hide">
+        <img alt="" class="img_meme">
+    </div>
+    <img src="/images/chat.svg" class="chat_icon" onclick="chat()"></div>
     <div class="chat hide">
         <div id="output">
 
         </div>
         <input type="text" id="chat_input" value="">
     </div>
+    <img src="/images/Lama.gif" onclick="rotateLama()" alt="Lama" id="Lama" />
+    <script type="text/javascript" src="js/AnimationLama.js"></script>
 </body>
 
 </html>
