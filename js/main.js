@@ -33,3 +33,20 @@ function chat() {
         content_chat.classList.add("hide")
     }
 }
+
+function dark() {
+    let img = document.querySelector("img");
+    let sup = document.querySelector(".img-sup");
+    let button = document.querySelector(".dark");
+
+    if (sup.classList.contains("hide")) {
+        sup.classList.remove("hide");
+        img.classList.add("rss-opacity");
+        img.classList.add("brightness");
+    }
+    else {
+        sup.classList.add("hide");
+        img.classList.remove("rss-opacity");
+        img.classList.remove("brightness");
+    }
+}

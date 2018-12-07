@@ -2,13 +2,8 @@
 {
     padding: 0;
     margin: 0;
-}
-
-body 
-{
-    background: url('/images/background.jpg') no-repeat center fixed; 
-    background-size: cover; 
     color: white;
+    font-family: sans-serif;
 }
 
 header
@@ -105,4 +100,48 @@ main
   .chat {
     width: 30%;
   }
+}
+
+.back_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-sup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(10deg, rgba(0, 0, 0, 0.4), rgba(10, 0, 68, 1));
+}
+
+.dark {
+    padding: 10px;
+    margin: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+.brightness {
+    filter: brightness(0.50);
+}
+
+.rss.opacity {
+    filter: opacity(50%);
+}
+
+.hide {
+    display: none;
 }
