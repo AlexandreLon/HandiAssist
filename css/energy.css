@@ -69,7 +69,6 @@ h1{
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
-    z-index: -2;
     top: 40px;
 }
 .svgdraw {
@@ -83,7 +82,7 @@ h1{
     z-index: 3;
 }
 .path {
-    stroke: rgba(3, 3, 3, 0.95);
+    stroke: #fff;
     stroke-width: 5px;
     stroke-dasharray: 1000px;
     stroke-dashoffset: 1000px;

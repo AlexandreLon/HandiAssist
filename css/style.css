@@ -200,6 +200,7 @@ object
 
 .container_icon
 {
+    position: relative;
     display: inline-block;
     margin: auto;
     text-align: center;
@@ -213,7 +214,6 @@ object
     display: inline-block;
     text-align: center;
 }
-<<<<<<< HEAD
 
 .container_icon::before
 {
@@ -222,5 +222,18 @@ object
     content: " ";
 }
 
-=======
->>>>>>> f53966dee95ded41f220e9f90eeb8fa81d1e8b72
+.container_icon::nth-child(3){
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.onclick-div{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+}
