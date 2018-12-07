@@ -145,6 +145,7 @@ function answer(message){
     if(m=="ouestlelama"){
         botMessage("cherche bien ....");
         setTimeout(botMessage,1000,"il est là");
+        return;
     }
     botMessage(search(m));
 }
