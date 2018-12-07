@@ -29,16 +29,25 @@ function hide_menu() {
     document.querySelector('main').classList.remove('hide');
 };
 
-function chat() {
-    console.log("passe")
+function chat(hop = false) {
     let content_chat = document.querySelector('.chat');
     if (content_chat.classList.contains('hide') && document.querySelector('.menu_content').classList.contains("hide")) {
-        content_chat.classList.remove("hide")
+        content_chat.classList.remove("hide");
+        if(hop){
+            hophophop();
+        }
+        clearTimeout(boto);
+        if(questionNum==0){
+            questionNum++;
+            chatInit();
+        }
     }
     else {
-        content_chat.classList.add("hide")
+        content_chat.classList.add("hide");
+        var boto = setTimeout(chat,10000,true);
     }
 }
+
 
 function dark() {
     let img = document.querySelector("img");
