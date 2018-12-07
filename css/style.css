@@ -167,3 +167,11 @@ object
     display: inline-block;
     text-align: center;
 }
+
+.container_icon::before
+{
+    width: 40px;
+    height: 40px;
+    content: " ";
+}
+

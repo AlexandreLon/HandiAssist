@@ -14,7 +14,18 @@ window.onload = function () {
     // console.log(svg);
 }
 
+function hide_all() {
+    hide_menu();
+    document.querySelector(".energy").classList.add("hide");
+}
+
+function display_energy() {
+    hide_all();
+    document.querySelector(".energy").classList.remove("hide");
+}
+
 function display_menu() {
+    hide_all();
     console.log("passe");
     document.querySelector('.menu_content').classList.remove('hide');
     document.querySelector('main').classList.add('hide');
@@ -66,10 +77,13 @@ function dark() {
 function fsvg(e, load) {
     let colorFill = document.querySelector(".img-sup").classList.contains("hide") || load ? "#FFF" : "#666";
     let doc = e.getSVGDocument();
-    var path = doc.querySelectorAll("path");
-    for (let i = 0; i < path.length; i++) {
-        path[i].setAttribute("fill", colorFill);
-        path[i].setAttribute("stroke", colorFill);
-        path[i].setAttribute("cursor", "pointer");
+    if (doc != null) {
+        var path = doc.querySelectorAll("path");
+        for (let i = 0; i < path.length; i++) {
+            path[i].setAttribute("fill", colorFill);
+            path[i].setAttribute("stroke", colorFill);
+            path[i].setAttribute("cursor", "pointer");
+        }
     }
+
 }
