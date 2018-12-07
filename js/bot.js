@@ -2,6 +2,7 @@ var questionNum = 0;
 
 let messages = [];
 var playerName = "Didier";
+var playerAge = "bébé";
 
 var data = [
         {   
@@ -9,12 +10,36 @@ var data = [
             "botRespout":["Salut je m'appelle HandiBot et je suis là pour vous","yo c'est moi HandiBot"]
         },
         {
-            "userinput":["bonjourjemappelle@Name","salutjesuis@Name","jemappelle@Name"],
+            "userinput":["bonjourjemappelle@Name","salutjesuis@Name","jemappelle@Name","salut","enfaitjemappelle@Name","aufaitjemappelle@Name","salut","cc","slt","salut@Name","cc@Name","slt@Name"],
             "botRespout":["Ok je t'appellerai @Name alors","@Name !!!!","Bonjour à toi @Name"]
         },
         {   
             "userinput":[""],
             "botRespout":["Salut je m'appelle HandiBot et je suis là pour vous","yo c'est moi HandiBot"]
+        },
+        {   
+            "userinput":["jai@Agesans","@Agesans","@Ages","jai@Ages"],
+            "botRespout":["donc tu as bien @Ages"+4+" ans ?","super un vieux de @Ages ans"]
+        },
+        {   
+            "userinput":["oui","si"],
+            "botRespout":["non","non non non !"]
+        },
+        {   
+            "userinput":["non"],
+            "botRespout":["oui","si","tu viens de perdre au ni oui ni non !"]
+        },
+        {   
+            "userinput":["lama","lamastico"],
+            "botRespout":["de quoi tu parles ?????","as tu cherché 'OU EST LE LAMA' ?","il est blanc, bonne chance","nuage nuage .... stico"]
+        },
+        {   
+            "userinput":["tuesbeau","tuesmoche","tumaimes","jetaime"],
+            "botRespout":["miroir, miroir","merci !","non","va sur meetic","moi aussi"]
+        },
+        {   
+            "userinput":["aurevoir@Name","ciao@Name","bisous@Name"],
+            "botRespout":["ciao @Name","aurevoir @Name","salut"]
         }
 ];
 
@@ -117,6 +142,10 @@ function answer(message){
         botMessage(diRule(message));
         return;
     }
+    if(m=="ouestlelama"){
+        botMessage("cherche bien ....");
+        setTimeout(botMessage,1000,"il est là");
+    }
     botMessage(search(m));
 }
 
@@ -133,16 +162,20 @@ function search(message){
                         case "Name": 
                             playerName = message.substring(h.length,message.length);
                             return respout[random(respout.length)].replace("@Name", playerName);
+                        case "Ages":
+                            if(isNaN(message.substring(h.length,h.length+2))) break;
+                            playerAge = message.substring(h.length,h.length+2);
+                            return respout[random(respout.length)].replace("@Ages", playerAge);
                     }
                 }
             }
             if(message == input[j]){
                 return respout[random(respout.length)];
             }
-            let f = ["","...","va sur google","moi aussi j'aime ça","attend je cherche ..."];
-            return f[random(f.length)];
         }
     }
+    let f = ["as tu vu le Lama caché ???","...","quel âge as-tu ?","moi aussi j'aime ça","attend je cherche ..."];
+    return f[random(f.length)];
 }
 
 function random(max){
