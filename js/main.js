@@ -81,22 +81,24 @@ function hide_menu() {
     document.querySelector('main').classList.remove('hide');
 };
 
+var boto = setTimeout(function(){});
+
 function chat(hop = false) {
+    clearTimeout(boto);
     let content_chat = document.querySelector('.chat');
     if (content_chat.classList.contains('hide') && document.querySelector('.menu_content').classList.contains("hide")) {
         content_chat.classList.remove("hide");
-        if (hop) {
+        if(hop){
             hophophop();
         }
-        clearTimeout(boto);
-        if (questionNum == 0) {
+        if(questionNum==0){
             questionNum++;
             chatInit();
         }
     }
     else {
         content_chat.classList.add("hide");
-        var boto = setTimeout(chat, 10000, true);
+        boto = setTimeout(chat,10000,true);
     }
 }
 
