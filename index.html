@@ -12,11 +12,11 @@
 </head>
 
 <body>
+    <img src="/images/back.jpg" title="contrast" class="back_img rss-opacity brightness">
+    <div class="img-sup"></div>
     <header>
         <div class="hour"></div>
     </header>
-    <img src="/images/back.jpg" title="contrast" class="back_img rss-opacity brightness">
-    <div class="img-sup"></div>
     <div class="dark" onclick="dark()">Change theme</div>
     <main>
         <div onclick="display_menu()" class="btn menu_display">Menu</div>
@@ -25,6 +25,26 @@
     <div class="menu_content hide">
         <div onclick="hide_menu()" class="btn menu_quit">Quitter</div>
         Menu
+        <div class="menu_all_icon">
+            <div class="container_icon">
+                <object data="/images/Icons/health.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+            <div class="container_icon">
+                <object data="/images/Icons/eau.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+            <div class="container_icon">
+                <object data="/images/Icons/security.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+            <div class="container_icon">
+                <object data="/images/Icons/robot.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+            <div class="container_icon">
+                <object data="/images/Icons/home.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+            <div class="container_icon">
+                <object data="/images/Icons/power.svg" type="image/svg+xml" onload="fsvg(this, true)"></object>
+            </div>
+        </div>
     </div>
     <div class="health hide">
         <h1>Santé</h1>
@@ -57,7 +77,7 @@
 
         </div>
         <div class="battery-time">Temps restant : <span id="span-time-car">4</span> heures</div>
-        <script src="js/energy.js"></script>
+        <!-- <script src="js/energy.js"></script> -->
     </div>
     <img src="images/chat.svg" class="chat_icon" onclick="chat()"></div>
     <div class="chat hide">

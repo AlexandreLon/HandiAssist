@@ -145,3 +145,25 @@ main
 .hide {
     display: none;
 }
+
+object 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.container_icon
+{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    margin: 0 2%;
+}
+
+.menu_all_icon
+{
+    margin: 10% 0;
+    display: inline-block;
+    text-align: center;
+}

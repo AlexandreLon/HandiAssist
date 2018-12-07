@@ -9,6 +9,9 @@ window.onload = function () {
         setTimeout(hour, 500);
     }
     hour();
+
+    // svg.fill("red");
+    // console.log(svg);
 }
 
 function display_menu() {
@@ -16,6 +19,9 @@ function display_menu() {
     document.querySelector('.menu_content').classList.remove('hide');
     document.querySelector('main').classList.add('hide');
     document.querySelector('.chat').classList.add("hide")
+    let objects = document.querySelectorAll('object');
+    for (let i = 0; i < objects.length; i++)
+        fsvg(objects[i]);
 };
 
 function hide_menu() {
@@ -39,6 +45,12 @@ function dark() {
     let sup = document.querySelector(".img-sup");
     let button = document.querySelector(".dark");
 
+    if (!document.querySelector('.menu_content').classList.contains("hide")) {
+        let objects = document.querySelectorAll('object');
+        for (let i = 0; i < objects.length; i++)
+            fsvg(objects[i]);
+    }
+
     if (sup.classList.contains("hide")) {
         sup.classList.remove("hide");
         img.classList.add("rss-opacity");
@@ -48,5 +60,16 @@ function dark() {
         sup.classList.add("hide");
         img.classList.remove("rss-opacity");
         img.classList.remove("brightness");
+    }
+}
+
+function fsvg(e, load) {
+    let colorFill = document.querySelector(".img-sup").classList.contains("hide") || load ? "#FFF" : "#666";
+    let doc = e.getSVGDocument();
+    var path = doc.querySelectorAll("path");
+    for (let i = 0; i < path.length; i++) {
+        path[i].setAttribute("fill", colorFill);
+        path[i].setAttribute("stroke", colorFill);
+        path[i].setAttribute("cursor", "pointer");
     }
 }
